@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    # restart: unless-stopped
+    volumes:
+      - ./data:/data
+      - .:/srv/app
+    environment:
+      - URL_BASE=https://a.short.com
+      - STORAGE_PATH=/data
+    ports:
+      - "8635:8635"
