@@ -8,6 +8,7 @@ services:
       - ./data:/data
       - .:/srv/app
     environment:
+      # - RACK_ENV=production
       - URL_BASE=https://a.short.com
       - STORAGE_PATH=/data
     ports:
