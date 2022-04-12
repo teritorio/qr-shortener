@@ -4,11 +4,14 @@ GEM
     chunky_png (1.4.0)
     daemons (1.4.1)
     eventmachine (1.2.7)
+    minitest (5.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     rack (2.2.3)
     rack-protection (2.2.0)
       rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rqrcode (2.1.1)
       chunky_png (~> 1.0)
       rqrcode_core (~> 1.0)
@@ -29,6 +32,8 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  minitest
+  rack-test
   rqrcode
   sinatra
   thin
