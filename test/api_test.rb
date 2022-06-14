@@ -11,7 +11,7 @@ class ApiTest < Minitest::Test
   end
 
   def test_unshort_e404
-    get '/not_existing_short_code_url', { url: '/not_existing_short_code_url'}
+    get '/not_existing_short_code_url', { url: '/not_existing_short_code_url' }
     assert_equal 404, last_response.status, last_response.body
   end
 
