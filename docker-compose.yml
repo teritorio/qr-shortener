@@ -3,13 +3,14 @@ version: '3'
 services:
   api:
     build: .
-    # restart: unless-stopped
+    image: ghcr.io/teritorio/qr-shortener:master
     volumes:
       - ./data:/data
       - .:/srv/app
     environment:
-      # - RACK_ENV=production
-      - URL_BASE=https://a.short.com
-      - STORAGE_PATH=/data
+      RACK_ENV: ${RACK_ENV}
+      URL_BASE: ${URL_BASE:-https://a.short.com}
+      STORAGE_PATH: /data
     ports:
       - "8635:8635"
+    restart: unless-stopped
