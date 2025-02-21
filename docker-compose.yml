@@ -6,7 +6,6 @@ services:
     image: ghcr.io/teritorio/qr-shortener:master
     volumes:
       - ./data:/data
-      - .:/srv/app
     environment:
       RACK_ENV: ${RACK_ENV}
       URL_BASE: ${URL_BASE:-https://a.short.com}

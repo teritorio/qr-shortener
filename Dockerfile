@@ -8,7 +8,7 @@ ADD Gemfile Gemfile.lock ./
 RUN bundle config --global silence_root_warning 1
 RUN bundle install
 
-ADD *.rb ./
+ADD *.rb *.ru ./
 
 EXPOSE 8635
 VOLUME /data/
