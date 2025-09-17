@@ -7,6 +7,10 @@ get '/' do
   204
 end
 
+get '/up' do
+  204
+end
+
 get '/shorten' do
   url = params[:url]
   shorten(ENV['URL_BASE'], url) if url && url.size < 1024
